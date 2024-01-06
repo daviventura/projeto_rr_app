@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 import webbrowser as wb
 
-with open('assets\style.css') as f:
+with open('assets/style.css') as f:
     st.markdown(f"<style>{f.read()}</style>",unsafe_allow_html=True)
 
 df=pd.read_excel('produtos_rr.xlsx')
