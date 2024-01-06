@@ -19,7 +19,7 @@ df_produto=df_tipo[df_tipo['Produto']==produto].iloc[0]
 
 link_produto=df_produto['links']
 
-st.image(df_produto['fotos'])
+# st.image(df_produto['fotos'])
 
 st.title(df_produto['Produto'])
 
@@ -39,7 +39,7 @@ col2.metric(label='Melhor Preço',value=f"{df_produto['Melhor Preço']:.2f}")
 
 col3.subheader(f"Melhor dia pra compra : {df_produto['Melhor Dia pra Compra']}")
 
-st.sidebar.image('img\RR Esfihas - Logotipo A.png')
+# st.sidebar.image('img\RR Esfihas - Logotipo A.png')
 
 if st.sidebar.button(label='Cardápio Digital',type='primary'):
     wb.open('https://app.cardapioweb.com/rr_esfihas')
