@@ -2,7 +2,9 @@ import pandas as pd
 import streamlit as st
 import webbrowser as wb
 
+
 df=pd.read_excel('produtos_rr.xlsx')
+df.head(1)
 
 tipos=df['Tipo'].unique()
 tipo=st.selectbox(label='Combo, Salgada ou Copinho?',
@@ -32,8 +34,8 @@ st.progress(df_produto['Preferência dos Clientes'],
 col1,col2,col3=st.columns(3)
 
 
-col1.metric(label='Preço',value=df_produto['Preço'])
-col2.metric(label='Melhor Preço',value=df_produto['Melhor Preço'])
+col1.metric(label='Preço',value=f"{df_produto['Preço']:.2f}")
+col2.metric(label='Melhor Preço',value=f"{df_produto['Melhor Preço']:.2f}")
 
 col3.subheader(f"Melhor dia pra compra : {df_produto['Melhor Dia pra Compra']}")
 
