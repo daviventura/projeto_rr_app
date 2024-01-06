@@ -1,7 +1,7 @@
 import pandas as pd
 import streamlit as st
 import webbrowser as wb
-
+import openpyxl
 
 df=pd.read_excel('produtos_rr.xlsx')
 
